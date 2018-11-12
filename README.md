@@ -361,7 +361,13 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 ```
 This creates a frozen_inference_graph.pb file in the \object_detection\inference_graph folder. The .pb file contains the object detection classifier.
 
-### 8. Use Your Newly Trained Object Detection Classifier!
+### 8. Run the Evaluation
+Here we go! From the \object_detection directory, issue the following command to begin training:
+```
+python eval.py --logtostderr 
+```
+
+### 9. Use Your Newly Trained Object Detection Classifier!
 The object detection classifier is all ready to go! I’ve written Python scripts to test it out on an image, video, or webcam feed.
 
 Before running the Python scripts, you need to modify the NUM_CLASSES variable in the script to equal the number of classes you want to detect. (For my Pinochle Card Detector, there are six cards I want to detect, so NUM_CLASSES = 6.)

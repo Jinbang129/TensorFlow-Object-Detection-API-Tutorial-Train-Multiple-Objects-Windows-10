@@ -247,8 +247,8 @@ def class_text_to_int(row_label):
 ```
 Then, generate the TFRecord files by issuing these commands from the \object_detection folder:
 ```
-python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
-python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
+python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=iamges\train.record
+python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=images\test.record
 ```
 These generate a train.record and a test.record file in \object_detection. These will be used to train the new object detection classifier.
 

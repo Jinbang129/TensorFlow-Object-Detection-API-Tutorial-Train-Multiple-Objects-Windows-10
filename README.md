@@ -361,14 +361,15 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 ```
 This creates a frozen_inference_graph.pb file in the \object_detection\inference_graph folder. The .pb file contains the object detection classifier.
 
-### 8. Run the Evaluation
-Here we go! From the \object_detection directory, issue the following command to begin training:
+### 8. Run the detection in images
+put the images we want to do the detection in images\detect_images_jim, and the output images will be in images\result_jim
+Here we go! From the \object_detection directory, issue the following command to begin detection:
 ```
 python Object_detection_image.py
 ```
 
 ### 9. Run the Evaluation
-Here we go! From the \object_detection directory, issue the following command to begin training:
+Here we go! From the \object_detection directory, issue the following command to begin evaluation:
 ```
 python eval.py --logtostderr 
 ```

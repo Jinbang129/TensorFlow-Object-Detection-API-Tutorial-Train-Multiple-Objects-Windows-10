@@ -369,9 +369,13 @@ python Object_detection_image.py
 ```
 
 ### 9. Run the Evaluation
-Here we go! From the \object_detection directory, issue the following command to begin evaluation:
+From the \object_detection directory, issue the following command to begin evaluation:
 ```
 python eval.py --logtostderr 
+```
+Check the evaluation in tensorboard
+```
+tensorboard --logdir=training
 ```
 
 ### 10. Use Your Newly Trained Object Detection Classifier!

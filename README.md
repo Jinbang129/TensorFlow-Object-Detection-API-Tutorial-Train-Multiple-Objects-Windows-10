@@ -361,24 +361,7 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 ```
 This creates a frozen_inference_graph.pb file in the \object_detection\inference_graph folder. The .pb file contains the object detection classifier.
 
-### 8. Run the detection in images
-put the images we want to do the detection in images\detect_images_jim, and the output images will be in images\result_jim
-Here we go! From the \object_detection directory, issue the following command to begin detection:
-```
-python Object_detection_image.py
-```
-
-### 9. Run the Evaluation
-From the \object_detection directory, issue the following command to begin evaluation:
-```
-python eval.py --logtostderr 
-```
-Check the evaluation in tensorboard
-```
-tensorboard --logdir=training
-```
-
-### 10. Use Your Newly Trained Object Detection Classifier!
+### 8. Use Your Newly Trained Object Detection Classifier!
 The object detection classifier is all ready to go! I’ve written Python scripts to test it out on an image, video, or webcam feed.
 
 Before running the Python scripts, you need to modify the NUM_CLASSES variable in the script to equal the number of classes you want to detect. (For my Pinochle Card Detector, there are six cards I want to detect, so NUM_CLASSES = 6.)
@@ -389,9 +372,23 @@ To run any of the scripts, type “idle” in the Anaconda Command Prompt (with 
 
 If everything is working properly, the object detector will initialize for about 10 seconds and then display a window showing any objects it’s detected in the image!
 
+```
+python Object_detection_image.py
+```
+
 <p align="center">
   <img src="doc/detector2.jpg">
 </p>
+
+### 9. Run the Evaluation
+From the \object_detection directory, issue the following command to begin evaluation:
+```
+python eval.py --logtostderr 
+```
+Check the evaluation in tensorboard
+```
+tensorboard --logdir=training
+```
 
 If you encounter errors, please check out the Appendix: it has a list of errors that I ran in to while setting up my object detection classifier. You can also trying Googling the error. There is usually useful information on Stack Exchange or in TensorFlow’s Issues on GitHub.
 

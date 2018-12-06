@@ -388,7 +388,7 @@ python eval.py --logtostderr
 ```
 Check the evaluation in tensorboard
 ```
-tensorboard --logdir=training
+tensorboard --logdir=images/eval #path to log dirction
 ```
 
 If you encounter errors, please check out the Appendix: it has a list of errors that I ran in to while setting up my object detection classifier. You can also trying Googling the error. There is usually useful information on Stack Exchange or in TensorFlow’s Issues on GitHub.

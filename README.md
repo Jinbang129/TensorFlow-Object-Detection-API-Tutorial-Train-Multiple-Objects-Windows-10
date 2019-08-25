@@ -384,7 +384,7 @@ python Object_detection_image.py
 ### 9. Run the Evaluation
 From the \object_detection directory, issue the following command to begin evaluation:
 ```
-python eval.py --logtostderr 
+python eval.py --eval_dir= path/to/evl image output
 ```
 Check the evaluation in tensorboard
 ```
